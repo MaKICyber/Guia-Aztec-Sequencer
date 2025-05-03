@@ -1,4 +1,4 @@
-# Guia-Aztec-Sequencer
+# Guia-Aztec.-Sequencer
 
 > Full step-by-step guide to run an Aztec Sequencer node (Alpha Testnet) on Ubuntu (WSL-compatible), including real errors and fixes.
 
@@ -100,21 +100,23 @@ sudo ufw allow ssh
 sudo ufw allow 40400
 sudo ufw allow 8080
 sudo ufw enable
+```
+
+---
 
 ## 6. Run the Node
 
 ### Open screen
 ```bash
 screen -S aztec
-
 ```
 
 ### Run Node
 ```bash
-aztec start --node --archiver --sequencer\   
+aztec start --node --archiver --sequencer  \ 
 --network alpha-testnet   
 --l1-rpc-urls https://rpc.builder0x69.io/v2/your_api_key   
---l1-consensus-host-urls https://rpc.builder0x69.io/v2/your_api_key  
+--l1-consensus-host-urls https://rpc.builder0x69.io/v2/your_api_key   
 --sequencer.validatorPrivateKey 0xyourprivatekey   
 --sequencer.coinbase 0xyouraddress   
 --p2p.p2pIp your.ip.address
