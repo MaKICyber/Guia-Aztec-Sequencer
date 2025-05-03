@@ -86,7 +86,22 @@ If Docker cannot access your Ubuntu environment (e.g., `error during connect: WS
 
 ---
 
-## 5. Run the Node
+## 5. Find IP & Enable Firewall
+
+### Find your public IP:
+```bash
+curl ipv4.icanhazip.com
+```
+
+### Enable UFW firewall and open required ports:
+```bash
+sudo ufw allow 22
+sudo ufw allow ssh
+sudo ufw allow 40400
+sudo ufw allow 8080
+sudo ufw enable
+
+## 6. Run the Node
 
 ### Open screen
 ```bash
@@ -109,7 +124,7 @@ To return: `screen -r aztec`
 
 ---
 
-## 6. Common Errors and Fixes
+## 7. Common Errors and Fixes
 
 ### ❌ Error: `Genesis archive root mismatch`
 **Fix:** Make sure you ran `aztec-up alpha-testnet`.
@@ -128,24 +143,6 @@ docker stop CONTAINER_ID
 
 ### ❌ NoBlobBodiesFoundError
 **Fix:** Wait for network sync or try restarting the node.
-
----
-
-## 7. Find IP & Enable Firewall
-
-### Find your public IP:
-```bash
-curl ipv4.icanhazip.com
-```
-
-### Enable UFW firewall and open required ports:
-```bash
-sudo ufw allow 22
-sudo ufw allow ssh
-sudo ufw allow 40400
-sudo ufw allow 8080
-sudo ufw enable
-```
 
 ---
 
