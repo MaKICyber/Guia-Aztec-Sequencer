@@ -113,13 +113,14 @@ screen -S aztec
 
 ### Run Node
 ```bash
-aztec start --node --archiver --sequencer  \ 
---network alpha-testnet   
---l1-rpc-urls https://rpc.builder0x69.io/v2/your_api_key   
---l1-consensus-host-urls https://rpc.builder0x69.io/v2/your_api_key   
---sequencer.validatorPrivateKey 0xyourprivatekey   
---sequencer.coinbase 0xyouraddress   
---p2p.p2pIp your.ip.address
+aztec start --node --archiver --sequencer \
+  --network alpha-testnet \
+  --l1-rpc-urls RPC_URL  \
+  --l1-consensus-host-urls BEACON_URL \
+  --sequencer.validatorPrivateKey 0xYourPrivateKey \
+  --sequencer.coinbase 0xYourAddress \
+  --p2p.p2pIp IP
+  --p2p.maxTxPoolSize 1000000000
 ```
 
 To detach screen: `CTRL + A`, then `D`  
