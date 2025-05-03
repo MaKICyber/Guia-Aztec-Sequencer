@@ -106,6 +106,7 @@ sudo ufw enable
 ### Open screen
 ```bash
 screen -S aztec
+
 ```
 
 ### Run Node
