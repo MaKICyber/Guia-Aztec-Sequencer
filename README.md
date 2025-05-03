@@ -1,4 +1,4 @@
-# Guia-Aztec.-Sequencer
+# Guia-Aztec-Sequencer
 
 > Full step-by-step guide to run an Aztec Sequencer node (Alpha Testnet) on Ubuntu (WSL-compatible), including real errors and fixes.
 
